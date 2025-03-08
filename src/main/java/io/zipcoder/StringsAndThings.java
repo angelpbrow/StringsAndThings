@@ -69,6 +69,8 @@ public class StringsAndThings {
      *           gHappy("xxggyygxx") // Should return  false
      */
     public Boolean gIsHappy(String input){
+        //if g exist in input AND the index before and after contains g
+        //return true
         return null;
     }
 
