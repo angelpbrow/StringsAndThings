@@ -88,7 +88,7 @@ public class StringsAndThings {
 
 
             }
-
+               // only catching true and not false test
         }
         return gIsHappy;
     }
