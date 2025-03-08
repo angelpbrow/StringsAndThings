@@ -102,6 +102,28 @@ public class StringsAndThings {
      *            countTriple("a") // Should return 0
      */
     public Integer countTriple(String input){
-        return null;
+        // To store the count
+        int l = input.length();
+        int cnt = 0;
+
+        // For every char in input
+
+        for (int i = 0; i < l - 2; i++) {
+              char tmp = input.charAt(i);
+            // if same char appears three times
+            if (tmp == input.charAt(i + 1) && tmp == input.charAt(i + 2)){
+
+                cnt++;
+
+            }
+
+
+
+            //return null;
+        }
+        return cnt;
+
+
+        //return null;
     }
 }
