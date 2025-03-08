@@ -68,10 +68,29 @@ public class StringsAndThings {
      *           gHappy("xxgxx") // Should return  false
      *           gHappy("xxggyygxx") // Should return  false
      */
-    public Boolean gIsHappy(String input){
+    public Boolean gIsHappy(String input) {
         //if g exist in input AND the index before and after contains g
         //return true
-        return null;
+        // need if (); and .charAt();
+        int n = input.length();
+        boolean found = true;
+
+        for (int i = 0; i < n; i++) {
+
+            String tmpString = input.substring(i, i + 1);
+            if (tmpString.equals("g") && i > 0 && i < n - 1) {
+
+                if (input.charAt(i - 1) == input.charAt(i) + 1) {
+                    found = true;
+
+                }
+                // if g also exists in index before -1 and after +1 current position it is true
+
+
+            }
+
+        }
+        return found;
     }
 
 
