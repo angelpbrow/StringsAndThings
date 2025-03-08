@@ -73,7 +73,7 @@ public class StringsAndThings {
         //return true
         // need if (); and .charAt();
         int n = input.length();
-        boolean found = true;
+        boolean gIsHappy = true;
 
         for (int i = 0; i < n; i++) {
 
@@ -81,7 +81,7 @@ public class StringsAndThings {
             if (tmpString.equals("g") && i > 0 && i < n - 1) {
 
                 if (input.charAt(i - 1) == input.charAt(i) + 1) {
-                    found = true;
+                       gIsHappy = true;
 
                 }
                 // if g also exists in index before -1 and after +1 current position it is true
@@ -90,7 +90,7 @@ public class StringsAndThings {
             }
 
         }
-        return found;
+        return gIsHappy;
     }
 
 
