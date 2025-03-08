@@ -14,23 +14,28 @@ public class StringsAndThings {
      *           countYZ("day fez"); // Should return 2
      *           countYZ("day fyyyz"); // Should return 2
      */
-    public Integer countYZ(String input){
+    public Integer countYZ(String input) {
 
         // To store the count
-        int cnt = 0;
+        int cnt = 1;
+
+        String[] words = input.split("\\s");
         // For every word
-        for (int i = 0; i < input.length(); i++) {
+
+        for (int i = 0; i < words.length; i++) {
 
             // If it ends with the given suffix
-            if (input.endsWith("y") || input.endsWith("x"))
+            if (words[i].endsWith("y") || words[i].endsWith("x")) {
                 cnt++;
+
+            }
+
+
+
+            //return null;
         }
-
         return cnt;
-
-        //return null;
     }
-
     /**
      * Given two strings, base and remove, return a version of the base string where all instances of the remove string have
      * been removed (not case sensitive). You may assume that the remove string is length 1 or more.
