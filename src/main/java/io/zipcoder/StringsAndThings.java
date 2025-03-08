@@ -15,7 +15,20 @@ public class StringsAndThings {
      *           countYZ("day fyyyz"); // Should return 2
      */
     public Integer countYZ(String input){
-        return null;
+
+        // To store the count
+        int cnt = 0;
+        // For every word
+        for (int i = 0; i < input.length(); i++) {
+
+            // If it ends with the given suffix
+            if (input.endsWith("y") || input.endsWith("x"))
+                cnt++;
+        }
+
+        return cnt;
+
+        //return null;
     }
 
     /**
