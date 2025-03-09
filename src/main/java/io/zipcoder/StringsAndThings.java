@@ -46,8 +46,11 @@ public class StringsAndThings {
      *           removeString("Hello there", "x") // Should return "Hello there"
      */
     public String removeString(String base, String remove){
-        return null;
+
+            String newString = base.replace(remove,"");
+            return newString;
     }
+
 
     /**
      * Given a string, return true if the number of appearances of "is" anywhere in the string is equal
@@ -73,25 +76,25 @@ public class StringsAndThings {
         //return true
         // need if (); and .charAt();
         int n = input.length();
-        boolean gIsHappy = true;
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i <= n - 1; i++) {
 
             String tmpString = input.substring(i, i + 1);
             if (tmpString.equals("g") && i > 0 && i < n - 1) {
 
-                if (input.charAt(i - 1) == input.charAt(i) + 1) {
-                       gIsHappy = true;
+                if (input.charAt(i + 1) == input.charAt(i) - 1) {
+
 
                 }
-                // if g also exists in index before -1 and after +1 current position it is true
-
-
+                }
+                // only catching true and not false test
             }
-               // only catching true and not false test
-        }
-        return gIsHappy;
+
+        return true;
     }
+
+
+
 
 
     /**
